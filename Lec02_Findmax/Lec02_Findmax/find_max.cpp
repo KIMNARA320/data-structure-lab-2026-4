@@ -3,7 +3,7 @@
 int findArrayMax(int score[], int n)  //자료구조: 배열 array, n은 배열 길이
 {
 	int tmp = score[0];
-	for (int i = 1; i < n; i++) {
+	for (int i = 1; i < n; i++) {     //알고리즘
 		if (score[i] > tmp) {
 			tmp = score[i];
 		}
