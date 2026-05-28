@@ -1,0 +1,10 @@
+오후 11:35에 빌드를 시작함...
+1>------ 빌드 시작: 프로젝트: Lec10_Graph, 구성: Debug x64 ------
+1>  main.cpp
+1>C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\main.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+1>C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\AdjMatGraph.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+1>  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+1>C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\main.cpp(2,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+1>  Lec10_Graph.vcxproj -> C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\x64\Debug\Lec10_Graph.exe
+========== 빌드: 1개 성공, 0개 실패, 0개 최신 상태, 0개 건너뜀 ==========
+========== 빌드이(가) 오후 11:35에 완료되었으며, 01.390 초이(가) 걸림 ==========

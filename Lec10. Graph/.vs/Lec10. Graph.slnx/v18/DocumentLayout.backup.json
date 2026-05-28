@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F99029CE-8659-49B4-8F38-DDFE5839BD77}|Lec10_Graph\\Lec10_Graph.vcxproj|C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10_Graph\\AdjMatGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F99029CE-8659-49B4-8F38-DDFE5839BD77}|Lec10_Graph\\Lec10_Graph.vcxproj|solutionrelative:Lec10_Graph\\AdjMatGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F99029CE-8659-49B4-8F38-DDFE5839BD77}|Lec10_Graph\\Lec10_Graph.vcxproj|C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10_Graph\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F99029CE-8659-49B4-8F38-DDFE5839BD77}|Lec10_Graph\\Lec10_Graph.vcxproj|solutionrelative:Lec10_Graph\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AF7260-7C07-40D9-AD64-8429416C25C2}|Lec10. Graph\\Lec10. Graph.vcxproj|C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10. Graph\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42AF7260-7C07-40D9-AD64-8429416C25C2}|Lec10. Graph\\Lec10. Graph.vcxproj|solutionrelative:Lec10. Graph\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AF7260-7C07-40D9-AD64-8429416C25C2}|Lec10. Graph\\Lec10. Graph.vcxproj|C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10. Graph\\Location2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42AF7260-7C07-40D9-AD64-8429416C25C2}|Lec10. Graph\\Lec10. Graph.vcxproj|solutionrelative:Lec10. Graph\\Location2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdjMatGraph.h",
+              "DocumentMoniker": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10_Graph\\AdjMatGraph.h",
+              "RelativeDocumentMoniker": "Lec10_Graph\\AdjMatGraph.h",
+              "ToolTip": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10_Graph\\AdjMatGraph.h*",
+              "RelativeToolTip": "Lec10_Graph\\AdjMatGraph.h*",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAjwFoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-28T17:06:37.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Location2D.h",
+              "DocumentMoniker": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10. Graph\\Location2D.h",
+              "RelativeDocumentMoniker": "Lec10. Graph\\Location2D.h",
+              "ToolTip": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10. Graph\\Location2D.h",
+              "RelativeToolTip": "Lec10. Graph\\Location2D.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-28T12:18:23.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10_Graph\\main.cpp",
+              "RelativeDocumentMoniker": "Lec10_Graph\\main.cpp",
+              "ToolTip": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10_Graph\\main.cpp",
+              "RelativeToolTip": "Lec10_Graph\\main.cpp",
+              "ViewState": "AgIAABEAAAAAAAAAAAAjwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-28T12:23:15.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10. Graph\\main.cpp",
+              "RelativeDocumentMoniker": "Lec10. Graph\\main.cpp",
+              "ToolTip": "C:\\Users\\kimco\\Documents\\data-structure-lab-2026-4\\Lec10. Graph\\Lec10. Graph\\main.cpp",
+              "RelativeToolTip": "Lec10. Graph\\main.cpp",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAIwJwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-28T12:14:16.944Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

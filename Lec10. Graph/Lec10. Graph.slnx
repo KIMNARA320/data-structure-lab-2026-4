@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Lec10. Graph/Lec10. Graph.vcxproj" Id="42af7260-7c07-40d9-ad64-8429416c25c2" />
+  <Project Path="Lec10_Graph/Lec10_Graph.vcxproj" Id="f99029ce-8659-49b4-8f38-ddfe5839bd77" />
+</Solution>
