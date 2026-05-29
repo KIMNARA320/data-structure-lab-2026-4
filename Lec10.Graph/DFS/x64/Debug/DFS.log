@@ -1,0 +1,9 @@
+﻿  main.cpp
+C:\Users\USER\Documents\data-structure-lab-2026-4\Lec10.Graph\DFS\AdjMatGraph.h(80,11): warning C4101: 'val' :참조되지 않은 지역 변수입니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\USER\Documents\data-structure-lab-2026-4\Lec10.Graph\DFS\main.cpp(4,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\USER\Documents\data-structure-lab-2026-4\Lec10.Graph\DFS\main.cpp(23,6): error C2371: 'main': 재정의. 기본 형식이 다릅니다.
+  C:\Users\USER\Documents\data-structure-lab-2026-4\Lec10.Graph\DFS\main.cpp(3,6):
+  'main' 선언을 참조하십시오.
+  
