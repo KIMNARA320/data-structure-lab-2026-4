@@ -1,6 +1,6 @@
 #include "AdjMatGraph.h"
 
-void main()
+/*void main()
 {
 	AdjMatGraph g;
 
@@ -32,9 +32,17 @@ void main()
 	g.DFS(0);
 	printf("\n");
 
-	/*WGraph wg;
+	WGraph wg;
 	wg.load("../graph.txt");
-	wg.display();*/
+	wg.display();
 
 	return;
+}*/
+
+void main()
+{
+	WGraphMST g;
+	g.load("graph.txt");
+	printf("MST By Kruskal's Algorithm\n");
+	g.Kruskal();
 }
