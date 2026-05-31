@@ -130,7 +130,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdjListGraph.h" />
     <ClInclude Include="AdjMatGraph.h" />
+    <ClInclude Include="Node.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="grpah.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,6 @@
 #pragma once
 #include <stdio.h>
+#include "AdjListGraph.h"
 #define MAX_VTXS 20
 #define INF 9999
 
@@ -20,15 +21,15 @@ public:
 	void reset() {
 		size = 0;
 		for (int i = 0; i < MAX_VTXS; i++)
-			for (int j = 0; j < MAX_VTXS; j++)
-				setEdge(i, j, 0);
+		for (int j = 0; j < MAX_VTXS; j++)
+			setEdge(i, j, 0);
 	}
 	//정점 삽입
 	void insertVertex(char name) {
 		if (!isFull()) vertices[size++] = name;
 		else printf("Error: 그래프 정점 개수 초과\n");
 	}
-	//간섭 삽입: 무방향 그래프의 경우임.(방향, 가중치 그래프에서는 수정)
+	//간선 삽입: 무방향 그래프의 경우임.(방향, 가중치 그래프에서는 수정)
 	void insertEdge(int u, int v) {
 		setEdge(u, v, 1);
 		setEdge(v, u, 1); //방향 그래프에서는 삭제됨(<u,v>만 존재)
@@ -45,23 +46,83 @@ public:
 	}
 };
 
-//탐색 기능이 추가된 인접 행렬 기반 그래프 클래스
+
+#define MAX_QUEUE_SIZE 100
+
+class CircularQueue {
+protected:
+	int front;                // 첫 번째 요소의 앞 인덱스
+	int rear;                 // 마지막 요소의 인덱스
+	int data[MAX_QUEUE_SIZE]; // 데이터를 저장할 배열
+
+public:
+	// 큐 생성자: 공백 상태로 초기화
+	CircularQueue() { front = rear = 0; }
+
+	// 큐가 비어있는지 확인
+	bool isEmpty() { return front == rear; }
+
+	// 큐가 가득 찼는지 확인
+	bool isFull() { return (rear + 1) % MAX_QUEUE_SIZE == front; }
+
+	// 큐에 데이터 삽입 (Enqueue)
+	void enqueue(int val) {
+		if (isFull()) {
+			printf("Error: 큐가 가득 찼습니다.\n");
+			return ;
+		}
+		rear = (rear + 1) % MAX_QUEUE_SIZE;
+		data[rear] = val;
+	}
+
+	// 큐에서 데이터 추출 (Dequeue)
+	int dequeue() {
+		if (isEmpty()) {
+			printf("Error: 큐가 비어있습니다.\n");
+			return -1;
+		}
+		front = (front + 1) % MAX_QUEUE_SIZE;
+		return data[front];
+	}
+};
+
 class SrchAMGraph : public AdjMatGraph
 {
-	bool visited[MAX_VTXS];
+protected:
+	bool visited[MAX_VTXS]; // 정점의 방문 정보
 public:
-	void resetVisited() {
+	void resetVisited() { // 모든 정점을 방문하지 않았다고 설정
 		for (int i = 0; i < size; i++)
 			visited[i] = false;
 	}
 	bool isLinked(int u, int v) { return getEdge(u, v) != 0; }
 
+	// 깊이 우선 탐색 함수
 	void DFS(int v) {
-		visited[v] = true;
-		printf("%c", getVertex(v));
-		for (int w = 0; w < size; w++) 
+		visited[v] = true; // 현재 정점을 방문함
+		printf("%c ", getVertex(v)); // 정점의 이름 출력
+		for (int w = 0; w < size; w++)
 			if (isLinked(v, w) && visited[w] == false)
-				DFS(w);
+				DFS(w); // 연결 + 방문X => 순환호출로 방문
+	}
+	void BFS(int v) {
+		visited[v] = true;
+		printf("%c ", getVertex(v));
+		CircularQueue que;
+		que.enqueue(v);
+
+		while (!que.isEmpty()) {
+			int current = que.dequeue();
+
+			// 핵심: w를 size-1부터 0까지 거꾸로 검사합니다.
+			for (int w = size - 1; w >= 0; w--) {
+				if (isLinked(current, w) && visited[w] == false) {
+					visited[w] = true;
+					printf("%c ", getVertex(w));
+					que.enqueue(w);
+				}
+			}
+		}
 	}
 };
 
@@ -73,15 +134,16 @@ public :
 	}
 	bool hasEdge(int i, int j) { return (getEdge(i, j) < INF); }
 
-	void load(char* filename) {
-		FILE* fp = fopen_s(&fp, filename, "r");
+	void load(const char* filename) {
+		FILE* fp;
+		fopen_s(&fp, filename, "r");
 		if (fp != NULL) {
 			int n, val;
 			fscanf_s(fp, "%d", &n);
 			for (int i = 0; i < n; i++) {
 				char str[80];
 				int val;
-				fscanf_s(fp, "%s", str, (unsigned int)sizeof(str));
+				fscanf_s(fp, "%s", str, sizeof(str));
 				insertVertex(str[0]);
 				for (int j = 0; j < n; j++) {
 					fscanf_s(fp, "%d", &val);
@@ -92,26 +154,3 @@ public :
 		}
 	}
 };
-
-/*class ConnectedComponentGraph : public SrchAMGraph {
-	int label[MAX_VTXS];
-public :
-	void labelDFS(int v, int color) {
-		visited[v] = true;
-		label[v] = color;
-		for (int w = 0; w < size; w++)
-			if (isLinked(v, w) && visited[w] == false)
-				labelDFS(w, color);
-	}
-	void findConnectedComponent() {
-		int count = 0;
-		for (int i = 0; i < size; i++)
-			if (visited[i] == false)
-				labelDFS(i, ++count);
-
-		printf("그래프 연결성분 개수 == %d\n", count);
-		for (int i = 0; i < size; i++)
-			printf( "%c=%d", getVertex(i), label[i]);
-		printf("\n");
-	}
-};*/

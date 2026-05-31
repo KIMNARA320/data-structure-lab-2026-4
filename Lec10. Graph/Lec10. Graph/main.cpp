@@ -19,11 +19,10 @@ char map[MAZE_SIZE][MAZE_SIZE] = {
 bool isValidLoc(int r, int c)
 {
     if (r < 0 || c < 0 || r >= MAZE_SIZE || c >= MAZE_SIZE) return false;
-    else return map[r][c] == '0' || map[r][c] == 'x';
+    else return map[r][c] == '0' || map[r][c] == 'x' || map[r][c] == 'e';
 }
 
-/*
-void main() {
+/*void main() {
     stack<int> intStack;
     intStack.push(3);
     int x = intStack.top();
@@ -59,7 +58,6 @@ void main() {
     printf("미로 탐색 실패\n");
 }
 
-#include <deque>
 void main() {
     deque<Location2D> locDeque;
     Location2D entry(1, 0);
@@ -138,6 +136,7 @@ int main() {
             locDeque.pop_front();
 
             int r = here.row, c = here.col;
+            if (map[r][c] == '.') continue;
             printf("(%d,%d) ", r, c);
             if (map[r][c] == 'x') {
                 printf("미로 탐색 성공\n");
@@ -154,37 +153,34 @@ int main() {
         printf("미로탐색실패\n");
     }
     case 3: {
-        printf("BFS로 미로탐색 \n");
-        CircularQueue que;
-        Location2D entry3(1, 0);
-        que.enqueue(entry3); // 시작점 큐에 삽입
+        deque<Location2D> locDeque;
+        Location2D entry(1, 0);
+        locDeque.push_back(entry); // 뒤로 넣기
 
-        while (!que.isEmpty()) {
-            Location2D here = que.dequeue(); // 큐에서 하나 꺼냄
+        while (locDeque.empty() == false) {
+            // 1. 맨 앞에서 꺼내기
+            Location2D here = locDeque.front();
+            locDeque.pop_front();
 
             int r = here.row, c = here.col;
+            if (map[r][c] == '.') continue;
             printf("(%d,%d) ", r, c);
-
             if (map[r][c] == 'x') {
-                printf("\n미로 탐색 성공 (BFS - 최단경로)\n");
+                printf("미로탐색성공\n");
                 return 0;
             }
             else {
-                map[r][c] = '.'; // 지나온 길 표시
-
-                // ★ BFS는 큐에 넣을 때(enqueue) 이웃 노드들을 뒤로 차례대로 넣습니다.
-                if (isValidLoc(r - 1, c)) que.enqueue(Location2D(r - 1, c));
-                if (isValidLoc(r + 1, c)) que.enqueue(Location2D(r + 1, c));
-                if (isValidLoc(r, c - 1)) que.enqueue(Location2D(r, c - 1));
-                if (isValidLoc(r, c + 1)) que.enqueue(Location2D(r, c + 1));
+                map[r][c] = '.';
+                if (isValidLoc(r - 1, c)) locDeque.push_back(Location2D(r - 1, c));
+                if (isValidLoc(r + 1, c)) locDeque.push_back(Location2D(r + 1, c));
+                if (isValidLoc(r, c - 1)) locDeque.push_back(Location2D(r, c - 1)); 
+                if (isValidLoc(r, c + 1)) locDeque.push_back(Location2D(r, c + 1));
             }
         }
-        printf("\n미로 탐색 실패\n");
-        break;
+        printf("미로탐색실패\n");
     }
     }
 }
-    
         
 
 

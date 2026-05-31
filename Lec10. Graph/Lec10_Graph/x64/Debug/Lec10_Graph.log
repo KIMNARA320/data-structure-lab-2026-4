@@ -1,15 +1,1 @@
-﻿  main.cpp
-C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\AdjMatGraph.h(77,12): error C2440: '초기화 중': 'errno_t'에서 'FILE *'(으)로 변환할 수 없습니다.
-  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
-      C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\AdjMatGraph.h(77,12):
-      정수 계열 형식에서 포인터 형식으로 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-  
-C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\main.cpp(23,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\main.cpp(36,5): error C2664: 'void WGraph::load(char *)': 인수 1을(를) 'const char [13]'에서 'char *'(으)로 변환할 수 없습니다.
-      C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\main.cpp(36,10):
-      문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
-      C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\AdjMatGraph.h(76,7):
-      'WGraph::load' 선언을 참조하십시오.
-      C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\Lec10_Graph\main.cpp(36,5):
-      인수 목록 '(const char [13])'을(를) 일치시키는 동안
-  
+﻿  Lec10_Graph.vcxproj -> C:\Users\kimco\Documents\data-structure-lab-2026-4\Lec10. Graph\x64\Debug\Lec10_Graph.exe
