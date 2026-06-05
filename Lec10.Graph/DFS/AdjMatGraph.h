@@ -1,5 +1,7 @@
 #pragma once
 #include <stdio.h>
+#include "MinHeap.h"
+#include "VertexSets.h"
 #define MAX_VTXS 20
 #define INF 9999
 
@@ -140,3 +142,4 @@ public:
 		}
 	}
 };
+

@@ -1,4 +1,5 @@
-//VertexSets.h
+#include "AdjMatGraph.h"
+
 class VertexSets {
 	int parent[MAX_VTXS];
 	int nSets;

@@ -1,3 +1,4 @@
+#include "HeapNode.h"
 #define MAX_ELEMENT 200
 
 //MinHeap.h
